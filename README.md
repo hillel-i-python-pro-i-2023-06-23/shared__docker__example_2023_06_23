@@ -7,9 +7,6 @@
 
 Homework related actions.
 
-
-
-
 ### ▶️ Run
 
 Make all actions needed for run homework from zero. Including configuration.
@@ -75,5 +72,3 @@ Purge all data related with services
 ```shell
 make d-purge
 ```
-
-### :)
