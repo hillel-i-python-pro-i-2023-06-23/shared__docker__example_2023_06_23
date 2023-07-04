@@ -1,22 +1,18 @@
-from faker import Faker
-
-from app.config import FILES_INPUT_DIR
-
-
-def show_greeting():
-    faker = Faker()
-    first_name = faker.first_name()
-    print(f"Hello {first_name}!")
-
-
-def check_file_exists():
-    gitkeep_file_path = FILES_INPUT_DIR.joinpath(".gitkeep")
-    if gitkeep_file_path.exists():
-        print(f"File exists: {gitkeep_file_path.as_uri()}")
-    else:
-        raise FileNotFoundError(f"File not found: {gitkeep_file_path.as_uri()}")
+from app.services.bla import (
+    bla1,
+    bla2,
+)
+from app.services.check_file_exists import check_file_exists
+from app.services.show_greeting import show_greeting
 
 
 def main():
     show_greeting()
     check_file_exists()
+
+    bla1()
+    bla2(
+        foo_1=1,
+        #
+        foo_3=3,
+    )
